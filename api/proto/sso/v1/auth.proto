@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option go_package = "github.com/shotowon/kon.io/api/gen/go/sso/v1/auth";
+
+package auth;
+
+service Auth {
+  rpc Register(RegisterRequest) returns (RegisterResponse);
+  rpc Login(RegisterRequest) returns (RegisterResponse);
+  rpc IsAdmin(IsAdminRequest) returns (IsAdminResponse);
+}
+
+message RegisterRequest {
+  string email = 1;
+  string username = 2;
+  string password = 3;
+}
+
+message RegisterResponse { string user_id = 1; }
+
+message LoginRequest {
+  oneof Login {
+    string username = 1;
+    string email = 2;
+  }
+  string password = 3;
+  string app_id = 4;
+}
+
+message LoginResponse { string token = 1; }
+
+message IsAdminRequest { string user_id = 1; }
+
+message IsAdminResponse { bool is_admin = 1; }
