@@ -13,6 +13,12 @@ import (
 const CfgEnvVar = "KONIO_SSO_CFG"
 const CfgFlag = "config"
 
+const (
+	EnvLocal = "local"
+	EnvDev   = "dev"
+	EnvProd  = "prod"
+)
+
 type Config struct {
 	App     AppConfig     `yaml:"app"`
 	GRPC    GRPCConfig    `yaml:"grpc"`
