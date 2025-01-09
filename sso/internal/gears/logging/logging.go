@@ -14,11 +14,11 @@ func SetupLogger(env string) (*slog.Logger, error) {
 	switch env {
 	case config.EnvLocal:
 		logger = slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
-			Level: slog.LevelInfo,
+			Level: slog.LevelDebug,
 		}))
 	case config.EnvDev:
 		logger = slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
-			Level: slog.LevelInfo,
+			Level: slog.LevelDebug,
 		}))
 	case config.EnvProd:
 		logger = slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
