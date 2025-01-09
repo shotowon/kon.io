@@ -6,7 +6,7 @@ package auth;
 
 service Auth {
   rpc Register(RegisterRequest) returns (RegisterResponse);
-  rpc Login(RegisterRequest) returns (RegisterResponse);
+  rpc Login(LoginRequest) returns (LoginResponse);
   rpc IsAdmin(IsAdminRequest) returns (IsAdminResponse);
 }
 
