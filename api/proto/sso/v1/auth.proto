@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/shotowon/kon.io/api/gen/go/sso/v1/auth";
+option go_package = "github.com/shotowon/kon.io/api/gen/go/sso/v1/auth;auth";
 
 package auth;
 
